@@ -26,6 +26,37 @@ export default function Contact() {
           value={formData.name}
           onChange={handleChange}
           margin="normal"
+          sx={{
+            '& .MuiOutlinedInput-root': {
+              '& fieldset': {
+                borderColor: 'grey', // Couleur par défaut de la bordure
+              },
+              '&:hover fieldset': {
+                borderColor: 'black', // Couleur de la bordure au survol
+              },
+              '&.Mui-focused fieldset': {
+                borderColor: 'black', // Couleur de la bordure lorsque le champ est en focus
+              },
+              '& input': {
+                color: 'black', // Couleur du texte par défaut
+              },
+              '&.Mui-focused input': {
+                color: 'black', // Couleur du texte en focus
+              },
+            },
+            '& input::placeholder': {
+              color: 'black', // Couleur du texte par défaut du placeholder
+            },
+            '& .MuiInputLabel-root': {
+              color: 'black', // Couleur du label
+            },
+            '& .Mui-focused .MuiInputLabel-root': {
+              color: 'black', // Couleur du label en focus
+            },
+            '&:focus-within': {
+              backgroundColor: '#f0f0f0', // Couleur de fond lorsque le champ est en focus
+            },
+          }}
         />
         <TextField
           fullWidth
@@ -34,6 +65,37 @@ export default function Contact() {
           value={formData.email}
           onChange={handleChange}
           margin="normal"
+          sx={{
+            '& .MuiOutlinedInput-root': {
+              '& fieldset': {
+                borderColor: 'grey',
+              },
+              '&:hover fieldset': {
+                borderColor: 'black',
+              },
+              '&.Mui-focused fieldset': {
+                borderColor: 'black',
+              },
+              '& input': {
+                color: 'black', // Couleur du texte par défaut
+              },
+              '&.Mui-focused input': {
+                color: 'black', // Couleur du texte en focus
+              },
+            },
+            '& input::placeholder': {
+              color: 'black', // Couleur du texte par défaut du placeholder
+            },
+            '& .MuiInputLabel-root': {
+              color: 'black', // Couleur du label
+            },
+            '& .Mui-focused .MuiInputLabel-root': {
+              color: 'black', // Couleur du label en focus
+            },
+            '&:focus-within': {
+              backgroundColor: '#f0f0f0',
+            },
+          }}
         />
         <TextField
           fullWidth
@@ -44,8 +106,39 @@ export default function Contact() {
           margin="normal"
           multiline
           rows={4}
+          sx={{
+            '& .MuiOutlinedInput-root': {
+              '& fieldset': {
+                borderColor: 'grey',
+              },
+              '&:hover fieldset': {
+                borderColor: 'black',
+              },
+              '&.Mui-focused fieldset': {
+                borderColor: 'black',
+              },
+              '& input': {
+                color: 'black', // Couleur du texte par défaut
+              },
+              '&.Mui-focused input': {
+                color: 'black', // Couleur du texte en focus
+              },
+            },
+            '& input::placeholder': {
+              color: 'black', // Couleur du texte par défaut du placeholder
+            },
+            '& .MuiInputLabel-root': {
+              color: 'black', // Couleur du label
+            },
+            '& .Mui-focused .MuiInputLabel-root': {
+              color: 'black', // Couleur du label en focus
+            },
+            '&:focus-within': {
+              backgroundColor: '#f0f0f0',
+            },
+          }}
         />
-        <Button variant="contained" color="primary" type="submit" sx={{marginTop: '20px', backgroundColor: 'black', color: 'white' }}>
+        <Button variant="contained" type="submit" sx={{ marginTop: '20px', backgroundColor: 'black', color: 'white' }}>
           Envoyer
         </Button>
       </form>

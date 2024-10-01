@@ -35,7 +35,7 @@ function App() {
             <Route path="/competences" element={<Skills />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/curruculum" element={<Curriculum />} />
+            <Route path="/curriculum" element={<Curriculum />} />
           </Routes>
         </Box>
 
