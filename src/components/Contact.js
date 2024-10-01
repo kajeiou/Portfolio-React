@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { Box, TextField, Button, Typography } from '@mui/material';
+import { Box, TextField, Button, Typography, Alert } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import EmailIcon from '@mui/icons-material/Email';
+import CheckIcon from '@mui/icons-material/Check';
 import emailjs from 'emailjs-com';
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [alert, setAlert] = useState({ open: false, message: '', severity: '' });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -13,14 +15,21 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     // Envoyer l'email
     emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, formData, process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
       .then((response) => {
         console.log('Email envoyé avec succès!', response.status, response.text);
+        setAlert({ open: true, message: 'Votre message a été envoyé avec succès!', severity: 'success' }); // Alerte de succès
+        setFormData({ name: '', email: '', message: '' }); // Réinitialiser les champs
       }, (error) => {
         console.log('Échec de l\'envoi de l\'email', error);
+        setAlert({ open: true, message: 'Échec de l\'envoi de votre message. Veuillez réessayer.', severity: 'error' }); // Alerte d'erreur
       });
+  };
+
+  const handleAlertClose = () => {
+    setAlert({ ...alert, open: false });
   };
 
   return (
@@ -28,6 +37,19 @@ export default function Contact() {
       <Typography variant="h4" gutterBottom>
         Me contacter
       </Typography>
+
+      {/* Affichage de l'alerte */}
+      {alert.open && (
+        <Alert
+          icon={<CheckIcon fontSize="inherit" />}
+          severity={alert.severity}
+          onClose={handleAlertClose}
+          sx={{ marginBottom: '20px' }}
+        >
+          {alert.message}
+        </Alert>
+      )}
+
       <form onSubmit={handleSubmit}>
         <TextField
           fullWidth
@@ -175,7 +197,6 @@ export default function Contact() {
         </Button>
       </form>
 
-    
       <Button
         variant="outlined"
         sx={{
@@ -185,7 +206,7 @@ export default function Contact() {
           justifyContent: 'center',
           width: '100%',
           color: 'black',
-          borderColor:'black'
+          borderColor: 'black'
         }}
         href="mailto:nabilkajeiou@gmail.com"
       >

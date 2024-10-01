@@ -72,12 +72,13 @@ export default function Home() {
                 <Carousel style={{ marginTop: '20px' }}>
                     {projects.map((project, index) => (
                         <Carousel.Item key={index}>
-                            <Card>
+                            <Card sx={{ backgroundColor: 'transparent', marginBottom:6 }}>
                                 <CardMedia
                                     component="img"
                                     alt={project.title}
                                     height="150"
                                     image={project.image}
+                                    
                                 />
                                 <CardContent>
                                     <Typography variant="h5">{project.title}</Typography>

@@ -90,14 +90,15 @@ export default function Experiences() {
         ))}
       </Stepper>
       {activeStep === experiences.length && (
-        <Paper square elevation={0} sx={{ p: 3 }}>
-          <Typography>
-            Enfin, je compte 3 ans d'alternance, 1 an en tant qu'indépendant, et 2 mois de stage
-          </Typography>
-          <Button onClick={handleReset} sx={{ mt: 1, mr: 1, color: 'black' }}>
-            Refaire un tour sur mes expériences
-          </Button>
-        </Paper>
+        <Paper square elevation={0} sx={{ p: 3, backgroundColor: 'transparent' }}>
+        <Typography>
+          Enfin, je compte 3 ans d'alternance, 1 an en tant qu'indépendant, et 2 mois de stage
+        </Typography>
+        <Button onClick={handleReset} sx={{ mt: 1, mr: 1, color: 'black' }}>
+          Refaire un tour sur mes expériences
+        </Button>
+      </Paper>
+      
       )}
     </Box>
   );
