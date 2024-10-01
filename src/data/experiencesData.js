@@ -5,9 +5,6 @@ const experiencesData = [
       description: `
         Développement d'une application de diagnostic WebRTC en React et d'un serveur WebSocket Node.Js.
         Développement d'applications web en utilisant les technologies Angular, Spring Boot et Node.js.
-        Configuration des applications sur un environnement Docker, et de serveurs Apache ou Nginx.
-        Création de scripts en Shell pour l'importation massive quotidienne de données dans une base de données.
-        Développement de fonctions lambdas en Python sur AWS, Création et configuration d'API sur AWS Gateway, Gestion d'une base de données Redshift serverless et de conteneurs S3.
       `,
     },
     {
@@ -21,10 +18,6 @@ const experiencesData = [
       date: "De septembre 2021 à septembre 2022",
       description: `
         Développement de l’application métier avec le framework Symfony PHP dans un environnement Docker.
-        Administration de la base de données MySQL.
-        Utilisation de Google Cloud Platform pour la gestion des événements sur Google Calendar et pour l'envoi de mails.
-        WooCommerce API pour synchroniser la boutique WordPress au back-office.
-        Google Charts pour la génération de tableaux de bords graphiques.
       `,
     },
     {
