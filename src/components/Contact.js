@@ -15,16 +15,14 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Envoyer l'email
     emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, formData, process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
       .then((response) => {
         console.log('Email envoyé avec succès!', response.status, response.text);
-        setAlert({ open: true, message: 'Votre message a été envoyé avec succès!', severity: 'success' }); // Alerte de succès
-        setFormData({ name: '', email: '', message: '' }); // Réinitialiser les champs
+        setAlert({ open: true, message: 'Votre message a été envoyé avec succès!', severity: 'success' }); 
+        setFormData({ name: '', email: '', message: '' }); s
       }, (error) => {
         console.log('Échec de l\'envoi de l\'email', error);
-        setAlert({ open: true, message: 'Échec de l\'envoi de votre message. Veuillez réessayer.', severity: 'error' }); // Alerte d'erreur
+        setAlert({ open: true, message: 'Échec de l\'envoi de votre message. Veuillez réessayer.', severity: 'error' });
       });
   };
 
@@ -38,7 +36,7 @@ export default function Contact() {
         Me contacter
       </Typography>
 
-      {/* Affichage de l'alerte */}
+
       {alert.open && (
         <Alert
           icon={<CheckIcon fontSize="inherit" />}
