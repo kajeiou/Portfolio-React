@@ -45,7 +45,7 @@ export default function Home() {
                             'Développeur Full Stack 🚀', 1000,
                             "<span>Développeur Full Stack &#x1F680;</span>", 2000
                         ]}
-                        loop={99}
+                        loop={5}
                         wrapper="span"
                     />
 

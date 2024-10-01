@@ -18,8 +18,8 @@ export default function Contact() {
     emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, formData, process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
       .then((response) => {
         console.log('Email envoyé avec succès!', response.status, response.text);
-        setAlert({ open: true, message: 'Votre message a été envoyé avec succès!', severity: 'success' }); 
-        setFormData({ name: '', email: '', message: '' }); s
+        setAlert({ open: true, message: 'Votre message a été envoyé avec succès!', severity: 'success' });
+        setFormData({ name: '', email: '', message: '' });
       }, (error) => {
         console.log('Échec de l\'envoi de l\'email', error);
         setAlert({ open: true, message: 'Échec de l\'envoi de votre message. Veuillez réessayer.', severity: 'error' });
@@ -31,11 +31,10 @@ export default function Contact() {
   };
 
   return (
-    <Box sx={{ padding: '50px' }}>
+    <Box sx={{ padding: '20px' }}>
       <Typography variant="h4" gutterBottom>
         Me contacter
       </Typography>
-
 
       {alert.open && (
         <Alert
@@ -180,6 +179,7 @@ export default function Contact() {
         <Button
           variant="contained"
           type="submit"
+          fullWidth
           sx={{
             marginTop: '20px',
             backgroundColor: 'black',
@@ -197,12 +197,12 @@ export default function Contact() {
 
       <Button
         variant="outlined"
+        fullWidth
         sx={{
           marginTop: '20px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          width: '100%',
           color: 'black',
           borderColor: 'black'
         }}
