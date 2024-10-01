@@ -39,17 +39,33 @@ export default function Home() {
                         wrapper="span"
                     />
                 </Typography>
-                <Typography variant="h4" sx={{ marginY: 2 }}>
-                    <Typical
-                        steps={[
-                            'Développeur Full Stack 🚀', 1000,
-                            "<span>Développeur Full Stack &#x1F680;</span>", 2000
-                        ]}
-                        loop={5}
-                        wrapper="span"
-                    />
+                <Typography
+    variant="h4"
+    sx={{
+        marginY: 2,
+        height: {
+            xs: '150px', // Hauteur pour petits écrans
+            sm: '120px', // Hauteur pour écrans moyens
+            md: '80px', // Hauteur pour grands écrans
+        },
+        lineHeight: {
+            xs: '40px', // lineHeight pour petits écrans
+            sm: '65px', // lineHeight pour écrans moyens
+            md: '40px', // lineHeight pour grands écrans
+        },
+    }}
+>
+    <Typical
+        steps={[
+            'Développeur Full Stack 🚀', 1000,
+            "<span>Développeur Full Stack &#x1F680;</span>", 2000
+        ]}
+        loop={5}
+        wrapper="span"
+    />
+</Typography>
 
-                </Typography>
+
                 <Typography variant="body1" sx={{ maxWidth: '600px', margin: '0 auto' }}>
                     Je suis un développeur full-stack passionné avec une expérience de 4 ans dans le développement web. J'ai travaillé sur plusieurs projets en utilisant des technologies telles qu'Angular, React, Node.js, et Spring Boot.
                 </Typography>
