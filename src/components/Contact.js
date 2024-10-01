@@ -45,7 +45,7 @@ export default function Contact() {
           multiline
           rows={4}
         />
-        <Button variant="contained" color="primary" type="submit" sx={{ marginTop: '20px' }}>
+        <Button variant="contained" color="primary" type="submit" sx={{marginTop: '20px', backgroundColor: 'black', color: 'white' }}>
           Envoyer
         </Button>
       </form>

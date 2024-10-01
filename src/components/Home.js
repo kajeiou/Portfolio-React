@@ -3,9 +3,11 @@ import Experiences from './Experiences';
 import Carousel from 'react-bootstrap/Carousel';
 import Skills from './Skills';
 import Contact from './Contact';
-import { Box, Typography, Card, CardContent, CardMedia } from '@mui/material';
+import { Box, Typography, Card, CardContent, CardMedia, Button } from '@mui/material';
 import projects from '../data/projectsData';
 import Curriculum from './Curriculum';
+import { Link } from 'react-router-dom';
+
 
 export default function Home() {
     return (
@@ -39,9 +41,9 @@ export default function Home() {
             </Box>
 
             <Box sx={{ marginBottom: 8, padding: 4, border: '1px solid #ddd', borderRadius: '8px', width: '90%', textAlign: 'center' }}>
-            <Typography variant="h4" gutterBottom>
-                Mes projets
-            </Typography>
+                <Typography variant="h4" gutterBottom>
+                    Mes projets
+                </Typography>
                 <Carousel style={{ marginTop: '20px' }}>
                     {projects.map((project, index) => (
                         <Carousel.Item key={index}>
@@ -61,6 +63,13 @@ export default function Home() {
                         </Carousel.Item>
                     ))}
                 </Carousel>
+                <Link to="/projects" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <Button variant="contained" sx={{ mt: 1, mr: 1, backgroundColor: 'black', color: 'white' }}>
+                    Voir tous mes projets
+                    </Button>
+                </Link>
+                
+
             </Box>
 
             <Box sx={{ marginBottom: 8, padding: 4, border: '1px solid #ddd', borderRadius: '8px', width: '90%', textAlign: 'center' }}>

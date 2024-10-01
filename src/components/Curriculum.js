@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Typography, Button } from '@mui/material';
-
+import ZoomInIcon from '@mui/icons-material/ZoomIn';
+import ZoomOutIcon from '@mui/icons-material/ZoomOut';
 export default function Curriculum() {
   const [zoomLevel, setZoomLevel] = useState(700); 
 
@@ -18,11 +19,11 @@ export default function Curriculum() {
         Mon CV
       </Typography>
       <Box>
-        <Button variant="outlined" onClick={handleZoomOut} sx={{ margin: 2 }}>
-          Zoom avant
+        <Button variant="outlined" onClick={handleZoomOut} sx={{ margin: 2, backgroundColor: 'black', color: 'white' }} >
+          <ZoomOutIcon /> 
         </Button>
-        <Button variant="outlined" onClick={handleZoomIn} sx={{ margin: 2 }}>
-          Zoom arrière
+        <Button variant="outlined" onClick={handleZoomIn} sx={{ margin: 2, backgroundColor: 'black', color: 'white' }}>
+          <ZoomInIcon />
         </Button>
       </Box>
       <img
