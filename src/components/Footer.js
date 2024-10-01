@@ -45,7 +45,7 @@ export default function Footer() {
       </Box>
 
       <Typography variant="body2" sx={{ mt: 2 }}>
-        <Link to="/contact" >
+        <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>
             <Button variant="text" sx={{ mt: 1, mr: 1, color: 'white' }}>
               Me contacter
             </Button>

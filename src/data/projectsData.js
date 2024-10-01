@@ -1,4 +1,7 @@
 const projectsData = [
+    { title: "WebRTC en React", description: "Application mobile de diagnostic de compatibilité au webRTC", image: require('../assets/project.jpg') },
+    { title: "Panoptes en Angular Et Java Spring Boot", description: "Application web de tableau de bord qui présentent des donénes métriques de clients", image: require('../assets/project.jpg') },
+    { title: "MyStats en Python", description: "Application mobile de publication de posts", image: require('../assets/project.jpg') },
     { title: "Amigable en React-Native", description: "Application mobile de publication de posts", image: require('../assets/project.jpg') },
     { title: "Flixbus en React-Native", description: "Application mobile de réservation de bus", image: require('../assets/project.jpg') },
     { title: "MyLibrary en React et Node", description: "Application web de gestion de livres", image: require('../assets/project.jpg') },
