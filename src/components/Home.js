@@ -21,8 +21,15 @@ export default function Home() {
                 textAlign: 'center',
             }}
         >
-            <Box sx={{  marginTop: 10,marginBottom: 4, padding: 8, border: '1px solid #ddd', borderRadius: '8px', width: '90%', textAlign: 'center' }}>
-                <Typography variant="h2">Nabil KAJEIOU</Typography>
+            <Box sx={{ marginTop: 10, marginBottom: 4, padding: 8, border: '1px solid #ddd', borderRadius: '8px', width: '90%', textAlign: 'center' }}>
+                <Typography 
+                    variant="h2" 
+                    sx={{
+                    fontSize: { xs: '2rem', sm: '3rem', md: '4rem' }, 
+                    }}
+                >
+                    Nabil KAJEIOU
+                </Typography>
                 <Typography variant="h4" sx={{ marginY: 2 }}>
                     Développeur Full Stack
                 </Typography>
@@ -32,7 +39,8 @@ export default function Home() {
                 <Typography variant="body1" sx={{ maxWidth: '600px', margin: '20px auto' }}>
                     Je suis également familiarisé avec le déploiement d'applications sur AWS et l'utilisation de Docker pour des environnements de développement optimisés. J'adore apprendre de nouvelles technologies et m'efforce d'améliorer continuellement mes compétences.
                 </Typography>
-            </Box>
+                </Box>
+
 
             <Box sx={{ marginBottom: 8, padding: 4, border: '1px solid #ddd', borderRadius: '8px', width: '90%', textAlign: 'center' }}>
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: 4 }}>

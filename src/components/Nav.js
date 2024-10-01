@@ -36,9 +36,15 @@ export default function Nav() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{ backgroundColor: '#383838' }}>
         <Toolbar>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            Nabil KAJEIOU
-          </Typography>
+          
+            <Typography variant="h6" sx={{ flexGrow: 1 }}>
+              <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+              
+                Nabil KAJEIOU
+              </Link>
+            </Typography>
+          
+          
 
           {isMobile ? (
             <>
