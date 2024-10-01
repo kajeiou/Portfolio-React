@@ -3,7 +3,13 @@ import { AppBar, Toolbar,  Box, Typography, IconButton,  Drawer, List, ListItem,
 
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
-import HandymanIcon from '@mui/icons-material/Handyman';
+import HomeIcon from '@mui/icons-material/Home';
+import WorkIcon from '@mui/icons-material/Work';
+import SchoolIcon from '@mui/icons-material/School';
+import BuildIcon from '@mui/icons-material/Build';
+import FolderIcon from '@mui/icons-material/Folder';
+import MarkunreadIcon from '@mui/icons-material/Markunread';
+import DescriptionIcon from '@mui/icons-material/Description';
 
 export default function Nav() {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
@@ -15,13 +21,13 @@ export default function Nav() {
   };
 
   const menuItems = [
-    { text: 'Accueil', path: '/' },
-    { text: 'Mes Experiences', path: '/experiences' },
-    { text: 'Mes Formations', path: '/formations' },
-    { text: 'Mes Compétences', path: '/competences' },
-    { text: 'Mes Projets', path: '/projects' },
-    { text: 'Me Contacter', path: '/contact' },
-    { text: 'Mon CV', path: '/curruculum' },
+    { text: 'Accueil', path: '/', icon: <HomeIcon /> },
+    { text: 'Mes Expériences', path: '/experiences', icon: <WorkIcon /> },
+    { text: 'Mes Formations', path: '/formations', icon: <SchoolIcon /> },
+    { text: 'Mes Compétences', path: '/competences', icon: <BuildIcon /> },
+    { text: 'Mes Projets', path: '/projects', icon: <FolderIcon /> },
+    { text: 'Me Contacter', path: '/contact', icon: <MarkunreadIcon /> },
+    { text: 'Mon CV', path: '/curriculum', icon: <DescriptionIcon /> },
   ];
 
   return (
@@ -49,27 +55,29 @@ export default function Nav() {
                 <MenuIcon />
               </IconButton>
               <Drawer anchor="left" open={isDrawerOpen} onClose={() => toggleDrawer(false)}>
-                <List>
-                  {menuItems.map((item) => (
-                    <ListItem button key={item.text} onClick={() => toggleDrawer(false)}>
-                      <Link to={item.path} style={{ textDecoration: 'none', color: 'inherit' }}>
-                        <ListItemText primary={item.text} />
-                      </Link>
-                    </ListItem>
-                  ))}
-                </List>
-              </Drawer>
+      <List>
+        {menuItems.map((item) => (
+          <ListItem button key={item.text} onClick={() => toggleDrawer(false)}>
+            <Link to={item.path} style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}>
+              {item.icon} {/* Afficher l'icône ici */}
+              <ListItemText primary={item.text} sx={{ marginLeft: 1 }} /> {/* Ajouter un espacement à gauche du texte */}
+            </Link>
+          </ListItem>
+        ))}
+      </List>
+    </Drawer>
             </>
           ) : (
             <Box>
               {menuItems.map((item) => (
-                <Button color="inherit" key={item.text}>
+                <Button color="inherit" key={item.text} startIcon={item.icon}>
                   <Link to={item.path} style={{ textDecoration: 'none', color: 'white' }}>
                     {item.text}
                   </Link>
                 </Button>
               ))}
             </Box>
+
           )}
         </Toolbar>
       </AppBar>
