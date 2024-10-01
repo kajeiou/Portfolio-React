@@ -10,10 +10,11 @@ import Experiences from './components/Experiences';
 import { Box } from '@mui/material';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Curriculum from './components/Curriculum';
-
+import './App.css'; // Assurez-vous d'importer le fichier CSS
 function App() {
   return (
-    <Router>
+    <div className="app-background">
+      <Router>
       <Box
         sx={{
           display: 'flex',
@@ -43,6 +44,8 @@ function App() {
         <Footer/>
       </Box>
     </Router>
+    </div>
+    
   );
 }
 

@@ -1,0 +1,13 @@
+.app-background {
+    background-image: url('../public/assets/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Hauteur minimale pour couvrir l'écran */
+    display: flex;
+    flex-direction: column; /* Permet d'étirer le contenu */
+}
+
+.app-content {
+    flex-grow: 1; /* Permet de faire grandir le contenu pour remplir l'espace restant */
+}

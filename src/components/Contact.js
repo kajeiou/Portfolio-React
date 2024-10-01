@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Box, TextField, Button, Typography } from '@mui/material';
+import SendIcon from '@mui/icons-material/Send';
+import EmailIcon from '@mui/icons-material/Email';
+import emailjs from 'emailjs-com';
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -10,7 +13,14 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    
+    // Envoyer l'email
+    emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, formData, process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
+      .then((response) => {
+        console.log('Email envoyé avec succès!', response.status, response.text);
+      }, (error) => {
+        console.log('Échec de l\'envoi de l\'email', error);
+      });
   };
 
   return (
@@ -29,32 +39,35 @@ export default function Contact() {
           sx={{
             '& .MuiOutlinedInput-root': {
               '& fieldset': {
-                borderColor: 'grey', // Couleur par défaut de la bordure
+                borderColor: 'grey',
               },
               '&:hover fieldset': {
-                borderColor: 'black', // Couleur de la bordure au survol
+                borderColor: 'black',
               },
               '&.Mui-focused fieldset': {
-                borderColor: 'black', // Couleur de la bordure lorsque le champ est en focus
+                borderColor: 'black',
               },
               '& input': {
-                color: 'black', // Couleur du texte par défaut
+                color: 'black',
               },
               '&.Mui-focused input': {
-                color: 'black', // Couleur du texte en focus
+                color: 'black',
               },
             },
             '& input::placeholder': {
-              color: 'black', // Couleur du texte par défaut du placeholder
+              color: 'black',
             },
             '& .MuiInputLabel-root': {
-              color: 'black', // Couleur du label
+              color: 'black',
             },
             '& .Mui-focused .MuiInputLabel-root': {
-              color: 'black', // Couleur du label en focus
+              color: 'black',
+            },
+            '& .MuiInputLabel-root.Mui-focused': {
+              color: 'black',
             },
             '&:focus-within': {
-              backgroundColor: '#f0f0f0', // Couleur de fond lorsque le champ est en focus
+              backgroundColor: '#f0f0f0',
             },
           }}
         />
@@ -77,20 +90,23 @@ export default function Contact() {
                 borderColor: 'black',
               },
               '& input': {
-                color: 'black', // Couleur du texte par défaut
+                color: 'black',
               },
               '&.Mui-focused input': {
-                color: 'black', // Couleur du texte en focus
+                color: 'black',
               },
             },
             '& input::placeholder': {
-              color: 'black', // Couleur du texte par défaut du placeholder
+              color: 'black',
             },
             '& .MuiInputLabel-root': {
-              color: 'black', // Couleur du label
+              color: 'black',
             },
             '& .Mui-focused .MuiInputLabel-root': {
-              color: 'black', // Couleur du label en focus
+              color: 'black',
+            },
+            '& .MuiInputLabel-root.Mui-focused': {
+              color: 'black',
             },
             '&:focus-within': {
               backgroundColor: '#f0f0f0',
@@ -118,30 +134,64 @@ export default function Contact() {
                 borderColor: 'black',
               },
               '& input': {
-                color: 'black', // Couleur du texte par défaut
+                color: 'black',
               },
               '&.Mui-focused input': {
-                color: 'black', // Couleur du texte en focus
+                color: 'black',
               },
             },
             '& input::placeholder': {
-              color: 'black', // Couleur du texte par défaut du placeholder
+              color: 'black',
             },
             '& .MuiInputLabel-root': {
-              color: 'black', // Couleur du label
+              color: 'black',
             },
             '& .Mui-focused .MuiInputLabel-root': {
-              color: 'black', // Couleur du label en focus
+              color: 'black',
+            },
+            '& .MuiInputLabel-root.Mui-focused': {
+              color: 'black',
             },
             '&:focus-within': {
               backgroundColor: '#f0f0f0',
             },
           }}
         />
-        <Button variant="contained" type="submit" sx={{ marginTop: '20px', backgroundColor: 'black', color: 'white' }}>
+        <Button
+          variant="contained"
+          type="submit"
+          sx={{
+            marginTop: '20px',
+            backgroundColor: 'black',
+            color: 'white',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: '100%',
+          }}
+        >
           Envoyer
+          <SendIcon sx={{ marginLeft: '8px', color: 'white' }} />
         </Button>
       </form>
+
+    
+      <Button
+        variant="outlined"
+        sx={{
+          marginTop: '20px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          width: '100%',
+          color: 'black',
+          borderColor:'black'
+        }}
+        href="mailto:nabilkajeiou@gmail.com"
+      >
+        Ou m'envoyer un mail directement
+        <EmailIcon sx={{ marginLeft: '8px' }} />
+      </Button>
     </Box>
   );
 }
