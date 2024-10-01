@@ -1,7 +1,9 @@
 import React from 'react';
-import { Box, Typography, IconButton } from '@mui/material';
+import { Box, Typography, IconButton, Button } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { Link } from 'react-router-dom';
+
 
 export default function Footer() {
   return (
@@ -21,10 +23,9 @@ export default function Footer() {
       </Typography>
 
       <Box>
-        {/* Icône GitHub */}
         <IconButton
           component="a"
-          href="https://github.com/kajeiou" // Lien vers ton GitHub
+          href="https://github.com/kajeiou" 
           target="_blank"
           rel="noopener noreferrer"
           sx={{ color: 'white' }}
@@ -32,7 +33,6 @@ export default function Footer() {
           <GitHubIcon />
         </IconButton>
 
-        {/* Icône LinkedIn */}
         <IconButton
           component="a"
           href="https://www.linkedin.com/in/kajeiou" 
@@ -45,12 +45,11 @@ export default function Footer() {
       </Box>
 
       <Typography variant="body2" sx={{ mt: 2 }}>
-        <a
-          href="#contact" 
-          style={{ color: 'white', textDecoration: 'none' }}
-        >
-          Me contacter
-        </a>
+        <Link to="/contact" >
+            <Button variant="text" sx={{ mt: 1, mr: 1, color: 'white' }}>
+              Me contacter
+            </Button>
+        </Link>
       </Typography>
     </Box>
   );

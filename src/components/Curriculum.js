@@ -2,15 +2,16 @@ import React, { useState } from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import ZoomInIcon from '@mui/icons-material/ZoomIn';
 import ZoomOutIcon from '@mui/icons-material/ZoomOut';
+
 export default function Curriculum() {
-  const [zoomLevel, setZoomLevel] = useState(700); 
+  const [zoomLevel, setZoomLevel] = useState(1); // Valeur de zoom initiale en tant que multiplicateur
 
   const handleZoomIn = () => {
-    setZoomLevel((prevLevel) => Math.min(prevLevel + 100, 1000)); 
+    setZoomLevel((prevLevel) => Math.min(prevLevel + 0.1, 2)); // Limite le zoom à 200%
   };
 
   const handleZoomOut = () => {
-    setZoomLevel((prevLevel) => Math.max(prevLevel - 100, 100)); 
+    setZoomLevel((prevLevel) => Math.max(prevLevel - 0.1, 0.5)); // Limite le zoom à 50%
   };
 
   return (
@@ -19,18 +20,29 @@ export default function Curriculum() {
         Mon CV
       </Typography>
       <Box>
-        <Button variant="outlined" onClick={handleZoomOut} sx={{ margin: 2, backgroundColor: 'black', color: 'white' }} >
-          <ZoomOutIcon /> 
+        <Button
+          variant="outlined"
+          onClick={handleZoomOut}
+          sx={{ margin: 2, backgroundColor: 'black', color: 'white' }}
+        >
+          <ZoomOutIcon />
         </Button>
-        <Button variant="outlined" onClick={handleZoomIn} sx={{ margin: 2, backgroundColor: 'black', color: 'white' }}>
+        <Button
+          variant="outlined"
+          onClick={handleZoomIn}
+          sx={{ margin: 2, backgroundColor: 'black', color: 'white' }}
+        >
           <ZoomInIcon />
         </Button>
       </Box>
       <img
         src="/assets/CV_DF_Nabil_Kajeiou.jpg"
         alt="Curriculum Vitae"
-        width={zoomLevel} 
-        style={{ borderRadius: '8px', maxWidth: '100%' }} 
+        style={{
+          width: `${zoomLevel * 100}%`, 
+          maxWidth: '100%',
+          borderRadius: '8px',
+        }}
       />
     </Box>
   );
