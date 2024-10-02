@@ -54,7 +54,7 @@ export default function Home() {
                     <Typical steps={['Nabil KAJEIOU', 1000]} loop={1} wrapper="span" />
                 </Typography>
                 <Typography variant="h4" sx={{ marginY: 2, height: { xs: '150px', sm: '120px', md: '80px' }, lineHeight: { xs: '40px', sm: '65px', md: '40px' } }}>
-                    <Typical steps={["<span>Développeur Full Stack &#x1F680;</span>", 1000, 'Développeur Full Stack 🚀', 1000]} loop={1} wrapper="span" />
+                    <Typical steps={["<span> Développeur Full Stack &#x1F680; </span>", 1000, 'Développeur Full Stack 🚀', 1000]} loop={1} wrapper="span" />
                 </Typography>
                 <Typography variant="body1" sx={{ maxWidth: '600px', margin: '0 auto' }}>
                     Je suis un développeur full-stack passionné avec une expérience de 4 ans dans le développement web. J'ai travaillé sur plusieurs projets en utilisant des technologies telles qu'Angular, React, Node.js, et Spring Boot.
