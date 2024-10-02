@@ -25,7 +25,7 @@ export default function Experiences() {
   };
 
   return (
-    <Box sx={{ maxWidth: { xs: '100%', sm: '700px' }, textAlign: 'center',  paddingLeft: '10px' }}>
+    <Box sx={{ maxWidth: { xs: '100%', sm: '700px' }, textAlign: 'center', mx: 'auto' }}>
       <Typography variant="h4" gutterBottom>
         Mes expériences
       </Typography>

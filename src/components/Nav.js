@@ -31,7 +31,7 @@ export default function Nav() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ backgroundColor: '#383838' }}>
+      <AppBar position="static" sx={{ backgroundColor: 'rgba(56, 56, 56, 1)', zIndex: 1 }}>
         <Toolbar>
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
             <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -69,7 +69,7 @@ export default function Nav() {
                   color="inherit"
                   key={item.text}
                   startIcon={item.icon}
-                  sx={{ '&:hover': { transform: 'scale(1.05)', transition: 'transform 0.2s' } }} 
+                  sx={{ '&:hover': { transform: 'scale(1.10)', transition: 'transform 0.8s' } }} 
                 >
                   <Link to={item.path} style={{ textDecoration: 'none', color: 'white' }}>
                     {item.text}
