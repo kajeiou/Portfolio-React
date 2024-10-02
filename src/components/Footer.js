@@ -30,7 +30,7 @@ export default function Footer() {
           rel="noopener noreferrer"
           sx={{ color: 'white' }}
         >
-          <GitHubIcon />
+          <GitHubIcon fontSize="large" />
         </IconButton>
 
         <IconButton
@@ -40,7 +40,7 @@ export default function Footer() {
           rel="noopener noreferrer"
           sx={{ color: 'white' }}
         >
-          <LinkedInIcon />
+          <LinkedInIcon fontSize="large" />
         </IconButton>
       </Box>
 
