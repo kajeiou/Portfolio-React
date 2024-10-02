@@ -10,7 +10,8 @@ import Curriculum from './Curriculum';
 import { Link } from 'react-router-dom';
 import Typical from 'react-typical';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
-import './Home.css'; // Assurez-vous d'ajouter ce fichier CSS pour les animations
+import { DiAngularSimple, DiReact, DiJava, DiJavascript1, DiGit, DiPhp, DiHtml5, DiDocker, DiPython } from "react-icons/di";
+import './Home.css'; 
 
 export default function Home() {
     const { ref: experiencesRef, inView: experiencesInView } = useInView({ threshold: 0.1 });
@@ -57,10 +58,13 @@ export default function Home() {
                     <Typical steps={["Développeur Full Stack &#x1F680; ", 1000, 'Développeur Full Stack 🚀', 1000]} loop={1} wrapper="span" />
                 </Typography>
                 <Typography variant="body1" sx={{ maxWidth: '600px', margin: '0 auto' }}>
-                    Je suis un développeur full-stack passionné avec une expérience de 4 ans dans le développement web. J'ai travaillé sur plusieurs projets en utilisant des technologies telles qu'Angular, React, Node.js, et Spring Boot.
+                    Je suis un développeur full-stack passionné avec une expérience de 4 ans dans le développement web. <br />
+                    <br />
+                    <DiHtml5 size='30' />  <DiAngularSimple size='30' />  <DiReact size='30' /> <DiJava size='30' />  
+                    <DiJavascript1 size='30' /> <DiGit size='30' /> <DiPhp size='30' /> <DiPython size='30' /> 
                 </Typography>
                 <Typography variant="body1" sx={{ maxWidth: '600px', margin: '20px auto' }}>
-                    Je suis également familiarisé avec le déploiement d'applications sur AWS et l'utilisation de Docker pour des environnements de développement optimisés. J'adore apprendre de nouvelles technologies et m'efforce d'améliorer continuellement mes compétences.
+                    Je suis familiarisé avec le déploiement d'applications sur AWS et l'utilisation de Docker <DiDocker size='30' />. J'adore apprendre de nouvelles technologies et m'efforce d'améliorer continuellement mes compétences.
                 </Typography>
             </Box>
 

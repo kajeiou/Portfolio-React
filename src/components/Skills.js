@@ -54,12 +54,12 @@ export default function Skills() {
         <Accordion key={categoryIndex} onChange={handleAccordionChange(categoryIndex)} sx={{marginBottom:2 }}>
       <AccordionSummary
         expandIcon={<ArrowDropDownIcon sx={{
-          backgroundColor: 'black', 
+          backgroundColor: 'rgba(0,0,0,0.8)', 
           color: 'white', }}  />}
         aria-controls={`panel${categoryIndex}-content`}
         id={`panel${categoryIndex}-header`}
         sx={{
-          backgroundColor: 'black', 
+          backgroundColor: 'rgba(0,0,0,0.8)', 
           color: 'white', 
           '& .MuiAccordionSummary-expandIcon': {
             color: 'lightgray', 
