@@ -5,7 +5,7 @@ import projects from '../data/projectsData';
 
 export default function Projects() {
   return (
-    <Box sx={{ padding: '50px' }}>
+    <Box sx={{ padding: '10px' }}>
       <Typography variant="h4" gutterBottom>
         Mes projets
       </Typography>

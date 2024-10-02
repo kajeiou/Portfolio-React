@@ -23,7 +23,25 @@ export default function Home() {
                 cursor: 'url(/assets/mouse.png), auto',
             }}
         >
-            <Box sx={{ marginTop: 10, marginBottom: 4, padding: 8, border: '1px solid #ddd', borderRadius: '8px', width: '90%', textAlign: 'center' }}>
+                <Box
+                    sx={{
+                        marginTop: 10,
+                        marginBottom: 4,
+                        padding: 8,
+                        border: '1px solid #ddd',
+                        borderRadius: '8px',
+                        width: '90%',
+                        textAlign: 'center',
+                        backgroundImage: 'url("assets/background_about.jpg")',
+                        backgroundSize: '50%', 
+                        backgroundPosition: 'center',
+                        transition: 'background-size 3s ease-in-out, filter 3s ease-in-out', 
+                        color: 'white',
+                        '&:hover': {
+                        backgroundSize: '80%', 
+                        },
+                    }}
+                >
                 <Typography 
                     variant="h2" 
                     sx={{
@@ -40,32 +58,31 @@ export default function Home() {
                     />
                 </Typography>
                 <Typography
-    variant="h4"
-    sx={{
-        marginY: 2,
-        height: {
-            xs: '150px', // Hauteur pour petits écrans
-            sm: '120px', // Hauteur pour écrans moyens
-            md: '80px', // Hauteur pour grands écrans
-        },
-        lineHeight: {
-            xs: '40px', // lineHeight pour petits écrans
-            sm: '65px', // lineHeight pour écrans moyens
-            md: '40px', // lineHeight pour grands écrans
-        },
-    }}
->
-    <Typical
-        steps={[
-            'Développeur Full Stack 🚀', 1000,
-            "<span>Développeur Full Stack &#x1F680;</span>", 2000
-        ]}
-        loop={5}
-        wrapper="span"
-    />
-</Typography>
-
-
+                    variant="h4"
+                    sx={{
+                        marginY: 2,
+                        height: {
+                            xs: '150px', 
+                            sm: '120px', 
+                            md: '80px', 
+                        },
+                        lineHeight: {
+                            xs: '40px', 
+                            sm: '65px', 
+                            md: '40px', 
+                        },
+                    }}
+                >
+                <Typical
+                    steps={[
+                        
+                        "<span>Développeur Full Stack &#x1F680;</span>", 1000,
+                        'Développeur Full Stack 🚀', 1000,
+                    ]}
+                    loop={1}
+                    wrapper="span"
+                />
+            </Typography>
                 <Typography variant="body1" sx={{ maxWidth: '600px', margin: '0 auto' }}>
                     Je suis un développeur full-stack passionné avec une expérience de 4 ans dans le développement web. J'ai travaillé sur plusieurs projets en utilisant des technologies telles qu'Angular, React, Node.js, et Spring Boot.
                 </Typography>
@@ -75,7 +92,7 @@ export default function Home() {
             </Box>
 
 
-            <Box sx={{ marginBottom: 8, padding: 4, border: '1px solid #ddd', borderRadius: '8px', width: '90%', textAlign: 'center' }}>
+            <Box sx={{ marginBottom: 8,  border: '1px solid #ddd', borderRadius: '8px', width: '90%', textAlign: 'center' }}>
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: 4 }}>
                     <Experiences />
                 </Box>
@@ -89,13 +106,7 @@ export default function Home() {
                     {projects.map((project, index) => (
                         <Carousel.Item key={index}>
                             <Card sx={{ backgroundColor: 'transparent', marginBottom:6 }}>
-                                <CardMedia
-                                    component="img"
-                                    alt={project.title}
-                                    height="150"
-                                    image={project.image}
-                                    
-                                />
+                                <CardMedia component="img" alt={project.title} height="150"image={project.image} />
                                 <CardContent>
                                     <Typography variant="h5">{project.title}</Typography>
                                     <Typography variant="body2">{project.description}</Typography>
@@ -111,9 +122,7 @@ export default function Home() {
                     </Button>
                 </Link>
                 
-
             </Box>
-
             <Box sx={{ marginBottom: 8, padding: 4, border: '1px solid #ddd', borderRadius: '8px', width: '90%', textAlign: 'center' }}>
                 <Skills />
             </Box>
@@ -123,7 +132,6 @@ export default function Home() {
             <Box sx={{ marginBottom: 8, padding: 4, border: '1px solid #ddd', borderRadius: '8px', width: '90%', textAlign: 'center' }}>
                 <Contact />
             </Box>
-            
         </Box>
     );
 }

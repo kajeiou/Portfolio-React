@@ -47,16 +47,26 @@ export default function Skills() {
 
   return (
     <Box sx={{ padding: '10px' }}>
-      <Typography variant="h5" gutterBottom>
+      <Typography variant="h4" gutterBottom>
         Mes compétences
       </Typography>
       {skillsData.map((category, categoryIndex) => (
-        <Accordion key={categoryIndex} onChange={handleAccordionChange(categoryIndex)}>
-          <AccordionSummary
-            expandIcon={<ArrowDropDownIcon />}
-            aria-controls={`panel${categoryIndex}-content`}
-            id={`panel${categoryIndex}-header`}
-          >
+        <Accordion key={categoryIndex} onChange={handleAccordionChange(categoryIndex)} sx={{marginBottom:2 }}>
+      <AccordionSummary
+        expandIcon={<ArrowDropDownIcon sx={{
+          backgroundColor: 'black', 
+          color: 'white', }}  />}
+        aria-controls={`panel${categoryIndex}-content`}
+        id={`panel${categoryIndex}-header`}
+        sx={{
+          backgroundColor: 'black', 
+          color: 'white', 
+          '& .MuiAccordionSummary-expandIcon': {
+            color: 'lightgray', 
+          },
+        }}
+      >
+        
             <Typography variant="subtitle1">{category.category}</Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -71,7 +81,7 @@ export default function Skills() {
                         sx={{
                           display: 'flex',
                           alignItems: 'center',
-                          fontWeight: progressValues[key] > 70 ? 'bold' : 'normal', // Met en gras si le progrès > 70%
+                          fontWeight: progressValues[key] > 70 ? 'bold' : 'normal', 
                         }}
                       >
                         {skill.name}
@@ -79,7 +89,7 @@ export default function Skills() {
                           <ThumbUpOffAltIcon
                             sx={{
                               marginLeft: 1,
-                              color: category.color, // Couleur selon la catégorie
+                              color: category.color, 
                             }}
                           />
                         )}
