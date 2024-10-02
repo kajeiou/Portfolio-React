@@ -26,7 +26,6 @@ const skillsData = [
         { name: "React", completion: 70 },
         { name: "React Native", completion: 90 },
         { name: "Symfony", completion: 70 },
-        { name: "Zend", completion: 50 },
         { name: "Bootstrap", completion: 80 },
         { name: "MaterialUI", completion: 80 },
       ],
