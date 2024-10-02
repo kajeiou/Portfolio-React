@@ -56,6 +56,13 @@ const projectsData = [
       technologies: ["React", "JavaScript", "CSS"]
     },
     {
+      title: "Jusqu'ici en Java Android",
+      description: "Application mobile de réservation de course comme Uber. Calcul de la distance du trajet en fonction du véhicule choisi et détermination d'un prix de course.",
+      image: require('../assets/project.jpg'),
+      githubLink: "https://github.com/kajeiou/gsb-zend",
+      technologies: ["Java Android", "Google Cloud Platform", "Google Map API", "Firebase", "Firebase Authentification", "Firebase Firestore Database"]
+    },
+    {
       title: "GSB en Zend",
       description: "Application back-office de gestion de médecins",
       image: require('../assets/project.jpg'),

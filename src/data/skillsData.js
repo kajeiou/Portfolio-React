@@ -14,8 +14,6 @@ const skillsData = [
       category: "Langages et frameworks",
       color: "#2196f3", 
       skills: [
-        { name: "C", completion: 45 },
-        { name: "C#", completion: 50 },
         { name: "HTML/CSS", completion: 90 },
         { name: "Javascript", completion: 85 },
         { name: "Typescript", completion: 60 },
@@ -23,7 +21,6 @@ const skillsData = [
         { name: "Python", completion: 70 },
         { name: "PHP", completion: 80 },
         { name: "Java", completion: 75 },
-        { name: "Golang", completion: 60 },
         { name: "Spring Boot", completion: 70 },
         { name: "Angular", completion: 65 },
         { name: "React", completion: 70 },
