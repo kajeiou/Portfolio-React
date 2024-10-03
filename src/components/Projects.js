@@ -36,42 +36,44 @@ export default function Projects() {
                 </Stack>
 
                 <Stack
-  direction={{ xs: 'column', sm: 'row' }}  // Colonne pour petits écrans, ligne pour plus grands
-  spacing={2}  // Espacement entre les boutons
-  sx={{
-    marginTop: '10px',
-    justifyContent: 'center',
-    alignItems: 'center',  // Centrer les éléments
-  }}
->
-  <Button
-    variant="contained"
-    color="black"
-    href={project.githubLink}
-    target="_blank"
-    rel="noopener noreferrer"
-    sx={{
-      display: 'flex',
-      justifyContent: 'center',
-    }}
-  >
-    Voir le code sur <GitHubIcon sx={{ marginLeft: 1 }} />
-  </Button>
+                  direction={{ xs: 'column', sm: 'row' }}  
+                  spacing={2}  
+                  sx={{
+                    marginTop: '10px',
+                    justifyContent: 'center',
+                    alignItems: 'center', 
+                  }}
+                >
+                  <Button
+                    variant="contained"
+                    color="black"
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    Voir le code sur <GitHubIcon sx={{ marginLeft: 1 }} />
+                  </Button>
 
-  <Button
-    variant="contained"
-    color="black"
-    href={project.demoLink}
-    target="_blank"
-    rel="noopener noreferrer"
-    sx={{
-      display: 'flex',
-      justifyContent: 'center',
-    }}
-  >
-    Voir l'application <GitHubIcon sx={{ marginLeft: 1 }} />
-  </Button>
-</Stack>
+                  <Button
+                    variant="contained"
+                    color="black"
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                      backgroundColor:"black",
+                      color:'white'
+                    }}
+                  >
+                    Voir une démonstration
+                  </Button>
+                </Stack>
 
 
                 
