@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Typography, Grid, Card, CardContent, CardMedia, Button, Chip, Stack } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import Carousel from 'react-bootstrap/Carousel';
 import projects from '../data/projectsData';
 
 export default function Projects() {
@@ -18,12 +19,12 @@ export default function Projects() {
                 alt={project.title}
                 height="150"
                 image={project.image}
+                
               />
               <CardContent>
                 <Typography variant="h5">{project.title}</Typography>
                 <Typography variant="body2">{project.description}</Typography>
 
-                
                 <Stack
                   direction="row"
                   spacing={1}
@@ -34,16 +35,67 @@ export default function Projects() {
                   ))}
                 </Stack>
 
-                <Button
-                  variant="contained"
-                  color="black"
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  sx={{ marginTop: '10px' }}
+                <Stack
+  direction={{ xs: 'column', sm: 'row' }}  // Colonne pour petits écrans, ligne pour plus grands
+  spacing={2}  // Espacement entre les boutons
+  sx={{
+    marginTop: '10px',
+    justifyContent: 'center',
+    alignItems: 'center',  // Centrer les éléments
+  }}
+>
+  <Button
+    variant="contained"
+    color="black"
+    href={project.githubLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    sx={{
+      display: 'flex',
+      justifyContent: 'center',
+    }}
+  >
+    Voir le code sur <GitHubIcon sx={{ marginLeft: 1 }} />
+  </Button>
+
+  <Button
+    variant="contained"
+    color="black"
+    href={project.demoLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    sx={{
+      display: 'flex',
+      justifyContent: 'center',
+    }}
+  >
+    Voir l'application <GitHubIcon sx={{ marginLeft: 1 }} />
+  </Button>
+</Stack>
+
+
+                
+                <Carousel
+                  style={{
+                    marginTop: '20px',
+                    
+                    marginLeft: 'auto',
+                    marginRight: 'auto', 
+                  }}
                 >
-                  Voir sur <GitHubIcon sx={{ marginLeft: 1 }} />
-                </Button>
+                  {project.screenshots.map((screenshot, idx) => (
+                    <Carousel.Item key={idx}>
+                      <CardMedia
+                        component="img"
+                        alt={`Screenshot ${idx + 1} de ${project.title}`}
+                        height="200"
+                        image={screenshot}
+                        sx={{ objectFit: 'cover' }}
+                      />
+                    </Carousel.Item>
+                  ))}
+                </Carousel>
+                
               </CardContent>
             </Card>
           </Grid>
