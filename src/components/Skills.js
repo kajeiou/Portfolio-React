@@ -52,19 +52,19 @@ export default function Skills() {
       </Typography>
       {skillsData.map((category, categoryIndex) => (
         <Accordion key={categoryIndex} onChange={handleAccordionChange(categoryIndex)} sx={{marginBottom:2 }}>
-      <AccordionSummary
-        expandIcon={<ArrowDropDownIcon sx={{
-          color: 'white', }}  />}
-        aria-controls={`panel${categoryIndex}-content`}
-        id={`panel${categoryIndex}-header`}
-        sx={{
-          backgroundColor: 'rgba(0,0,0,0.8)', 
-          color: 'white', 
-          '& .MuiAccordionSummary-expandIcon': {
-            color: 'lightgray', 
-          },
-        }}
-      >
+          <AccordionSummary
+            expandIcon={<ArrowDropDownIcon sx={{
+              color: 'white', }}  />}
+            aria-controls={`panel${categoryIndex}-content`}
+            id={`panel${categoryIndex}-header`}
+            sx={{
+              backgroundColor: 'rgba(0,0,0,0.8)', 
+              color: 'white', 
+              '& .MuiAccordionSummary-expandIcon': {
+                color: 'lightgray', 
+              },
+            }}
+          >
         
             <Typography variant="subtitle1">{category.category}</Typography>
           </AccordionSummary>

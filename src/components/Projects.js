@@ -80,9 +80,15 @@ export default function Projects() {
                 <Carousel
                   style={{
                     marginTop: '20px',
-                    
                     marginLeft: 'auto',
-                    marginRight: 'auto', 
+                    marginRight: 'auto',
+                  }}
+                  nextIcon={<span className="carousel-control-next-icon" style={{ filter: 'invert(100%)' }} />}
+                  prevIcon={<span className="carousel-control-prev-icon" style={{ filter: 'invert(100%)' }} />}
+                  indicators={true}
+                  interval={4000}
+                  indicatorStyle={{
+                    backgroundColor: 'black',
                   }}
                 >
                   {project.screenshots.map((screenshot, idx) => (
