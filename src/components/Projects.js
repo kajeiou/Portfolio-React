@@ -87,9 +87,7 @@ export default function Projects() {
                   prevIcon={<span className="carousel-control-prev-icon" style={{ filter: 'invert(100%)' }} />}
                   indicators={true}
                   interval={4000}
-                  indicatorStyle={{
-                    backgroundColor: 'black',
-                  }}
+                  
                 >
                   {project.screenshots.map((screenshot, idx) => (
                     <Carousel.Item key={idx}>

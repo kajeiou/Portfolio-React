@@ -91,9 +91,7 @@ export default function Home() {
                     prevIcon={<span className="carousel-control-prev-icon" style={{ filter: 'invert(100%)' }} />}
                     indicators={true}
                     interval={2000}
-                    indicatorStyle={{
-                        backgroundColor: 'black',
-                    }}>
+                    >
                     {projects.map((project, index) => (
                         <Carousel.Item key={index}>
                             <Card sx={{ backgroundColor: 'transparent', marginBottom: 6 }}>
