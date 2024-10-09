@@ -86,7 +86,7 @@ export default function Home() {
                 <Typography variant="h4" gutterBottom>
                     Mes projets
                 </Typography>
-                <Carousel style={{ marginTop: '20px' }} 
+                <Carousel style={{ marginTop: '20px',height:"400px" }} 
                     nextIcon={<span className="carousel-control-next-icon" style={{ filter: 'invert(100%)' }} />}
                     prevIcon={<span className="carousel-control-prev-icon" style={{ filter: 'invert(100%)' }} />}
                     indicators={true}
