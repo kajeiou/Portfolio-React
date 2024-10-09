@@ -12,6 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Curriculum from './components/Curriculum';
 import './App.css'; 
 
+
 function App() {
   return (
     <div className="app-background">

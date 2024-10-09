@@ -4,7 +4,7 @@ import Experiences from './Experiences';
 import Carousel from 'react-bootstrap/Carousel';
 import Skills from './Skills';
 import Contact from './Contact';
-import { Box, Typography, Card, CardContent, CardMedia, Button } from '@mui/material';
+import { Box, Typography, Card, CardContent, CardMedia, Button, Avatar } from '@mui/material';
 import projects from '../data/projectsData';
 import Curriculum from './Curriculum';
 import { Link } from 'react-router-dom';
@@ -29,7 +29,6 @@ export default function Home() {
                 justifyContent: 'center',
                 padding: '20px',
                 textAlign: 'center',
-                cursor: 'url(/assets/mouse.png), auto',
             }}
         >
             <Box
@@ -51,6 +50,23 @@ export default function Home() {
                     },
                 }}
             >
+                <Avatar
+                    alt="Nabil KAJEIOU"
+                    src="/assets/myAvatar.png"
+                    sx={{
+                        width: { xs: 120, sm: 120, md: 150 },
+                        height: { xs: 120, sm: 120, md: 150 },
+                        margin: '0 auto',
+                        marginBottom: { xs: '20px', sm: '0' }, 
+                        filter: 'grayscale(100%)', 
+                        transition: 'filter 0.3s ease-in-out', 
+                        '&:hover': {
+                        filter: 'grayscale(0%)', 
+                        },
+                    }}
+                />
+
+                    
                 <Typography variant="h2" sx={{ fontSize: { xs: '2rem', sm: '3rem', md: '4rem' } }}>
                     <Typical steps={['Nabil KAJEIOU', 1000]} loop={1} wrapper="span" />
                 </Typography>

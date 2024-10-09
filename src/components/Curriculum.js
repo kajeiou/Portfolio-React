@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import ZoomInIcon from '@mui/icons-material/ZoomIn';
 import ZoomOutIcon from '@mui/icons-material/ZoomOut';
-import GetAppIcon from '@mui/icons-material/GetApp'; // Import de l'icône de téléchargement
+import GetAppIcon from '@mui/icons-material/GetApp'; 
 
 export default function Curriculum() {
   const [zoomLevel, setZoomLevel] = useState(700); 

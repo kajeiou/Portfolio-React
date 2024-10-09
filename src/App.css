@@ -15,9 +15,21 @@
     z-index: -1;
 }
 
-
 .app-content {
     flex-grow: 1; 
     position: relative; 
     z-index: 1; 
+}
+
+* {
+    cursor: url('./cursor.svg'), auto; 
+}
+
+button,
+a,
+.MuiButton-root,
+.MuiIconButton-root,
+.MuiCarousel-button,
+.MuiCarousel-indicator, .MuiButtonBase-root {
+    cursor: url('./cursor.svg'), auto; 
 }
